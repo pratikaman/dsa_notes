@@ -1,0 +1,3 @@
+Recursion involves
+1) calling function repeatedly
+2) condition to break
