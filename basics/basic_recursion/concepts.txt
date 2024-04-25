@@ -1,3 +1,11 @@
 Recursion involves
 1) calling function repeatedly
 2) condition to break
+
+
+
+// For reversing a array.
+// Do swap.
+// If length of array is Odd- (N-1)/2 steps needed
+// If length of array is Even- (N)/2 steps needed
+
