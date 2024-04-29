@@ -16,3 +16,14 @@
 #        if arr[j] < arr[j-1]
 # 
 #             swap(arr[j] , arr[j-1])
+
+
+# Merge sort
+# merger sort is n*log2(n) time complexity
+
+
+
+
+
+# Quick sort
+#  
