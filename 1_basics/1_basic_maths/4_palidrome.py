@@ -1,12 +1,13 @@
 def is_palindrome(s):
     return str(s) == str(s)[::-1]
 
+
 def is_palindrome_hard(n):
-    n2= n
+    n2 = n
     rev = 0
 
     while n > 0:
-        rev = rev*10 + n % 10
+        rev = rev * 10 + n % 10
         n = n // 10
     
     return n2 == rev

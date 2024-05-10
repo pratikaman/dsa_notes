@@ -1,6 +1,18 @@
 import math
 
 def check_armstrong(n):
+    """
+    Check if a number is an Armstrong number.
+
+    An Armstrong number is a number that is equal to the sum of its own digits raised to the power of the number of digits.
+    For example, 153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153.
+
+    Args:
+        n (int): The number to be checked.
+
+    Returns:
+        bool: True if the number is an Armstrong number, False otherwise.
+    """
     n2 = n
     sum = 0
 

@@ -1,5 +1,4 @@
 
-
 def find_gcd(a, b):
     min_num = min(a, b)
 

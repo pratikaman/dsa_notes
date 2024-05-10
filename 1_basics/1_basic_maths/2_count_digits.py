@@ -10,6 +10,7 @@ def count_digits(n):
     return count
 
 
+# log10(n) approx equal to number of digits in n - 1
 def count_digits_log(n):
     return int(math.log10(n) + 1)
 
