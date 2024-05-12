@@ -11,10 +11,6 @@ def left_rotate_by_d(arr, d):
     arr[-d:] = temp
 
 
-def left_rotate_by_d_v2(arr, d):
-    pass
-
-
 def main():
     arr = [1, 2, 3, 4, 5, 3, 3, 1, 6]
     left_rotate_by_d(arr, 31)
