@@ -92,6 +92,9 @@ def missing_number4(n, arr):
 
     return xor1 ^ xor2
 
+    # time complexity: O(n) 
+    # space complexity: O(1)
+
 
 
 
