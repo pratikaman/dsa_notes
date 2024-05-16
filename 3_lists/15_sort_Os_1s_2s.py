@@ -52,7 +52,11 @@ def sort_0s_1s_2s_V2(arr):
         elif arr[mid] == 2:
             arr[mid], arr[high] = arr[high], arr[mid]
             high -= 1
-    
+            
+        # Time Complexity: O(N), where N = size of the given array.
+        # Reason: We are using a single loop that can run at most N times.
+
+        # Space Complexity: O(1) as we are not using any extra space.
 
 
 def main():
