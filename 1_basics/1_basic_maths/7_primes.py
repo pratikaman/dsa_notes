@@ -7,7 +7,7 @@ def check_prime_easy(n):
         if n % i == 0:
             count += 1
     
-    return True if count == 2 else False
+    return count == 2
 
 
 def check_prime_hard(n):
@@ -21,7 +21,7 @@ def check_prime_hard(n):
                 count += 1
 
     
-    return True if count == 2 else False
+    return count == 2
 
 
 def main():
