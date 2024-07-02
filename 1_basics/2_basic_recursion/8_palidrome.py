@@ -28,31 +28,41 @@ def check_palidrome_naive_approach(strr):
 
 # Leetcode 125
 # Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
-def check_palidrome2(s):
+def check_palidrome2(s: str) -> bool:
+    """
+    Determines if a given string is a palindrome, considering only alphanumeric characters and ignoring cases.
 
-    # create a list of characters from the string
-    # remove all non-alphanumeric characters and convert to lowercase/uppercase
-    clean_s = [char.lower() for char in s if char.isalnum()]
+    Parameters:
+    s (str): The input string to be checked.
 
+    Returns:
+    bool: True if the string is a palindrome, False otherwise.
+    """
+    # Create a list of characters from the string, removing all non-alphanumeric characters and converting to lowercase
+    clean_s: list | None = [char.lower() for char in s if char.isalnum()]
 
     n = len(clean_s)
 
+    # An empty string is considered a palindrome
     if n == 0:
         return True
     
+    # A single character string is considered a palindrome
     if n == 1:
         return True
     
+    # Check if the string is a palindrome by comparing characters from both ends
     for i in range(0, n):
 
-
-        if i >= n//2:
+        # if pointer crosses the middle, the string is not a palindrome
+        if i >= n // 2:
             break
 
-        if clean_s[i] != clean_s[n-i-1]:
+        # If the characters do not match, the string is not a palindrome
+        if clean_s[i] != clean_s[n - i - 1]:
             return False
 
-    
+    # If all characters match, the string is a palindrome
     return True
 
 

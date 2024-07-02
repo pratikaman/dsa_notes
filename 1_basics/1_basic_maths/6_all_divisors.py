@@ -11,7 +11,7 @@ def all_divisors(n):
 
 
 def main():
-    n = 3
+    n = 12
     divisors = all_divisors(n)
     print(divisors)
     print(sum(divisors))

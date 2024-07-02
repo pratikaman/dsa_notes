@@ -12,7 +12,11 @@ def quick_sort(arr):
 
     return quick_sort(less) + [pivot] + quick_sort(larger)
 
+    # Time complexity: O(n log n) in the average case, 
+    # O(n^2) in the worst case if the array is already sorted
 
+
+    # Space complexity:
 
 
 def quick_sortV2(arr, low, high):

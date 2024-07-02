@@ -28,14 +28,31 @@ def second_smallest(lst: List[int]) -> int:
 
 
 def second_largest_v2(lst: List[int]) -> int:
+    """
+    This function finds the second largest number in a given list.
+
+    Parameters:
+    lst (List[int]): The input list of integers.
+
+    Returns:
+    int: The second largest number in the list.
+
+    Note:
+    This function assumes that the list contains at least two unique integers.
+    """
+
+    # Initialize the largest number as the first element of the list
     largest = lst[0]
 
+    # Iterate over the list to find the largest number
     for i in lst:  # O(n)
         if i > largest:
             largest = i
 
+    # Initialize the second largest number as negative infinity
     second_largest = float('-inf')
 
+    # Iterate over the list to find the second largest number
     for i in lst:  # O(n)
         if i > second_largest and i != largest:
             second_largest = i
@@ -60,14 +77,33 @@ def second_smallest_v2(lst: List[int]) -> int:
 
 
 def second_largest_v3(lst: List[int]) -> int:
+    """
+    This function finds the second largest number in a given list.
+
+    Parameters:
+    lst (List[int]): The input list of integers.
+
+    Returns:
+    int: The second largest number in the list.
+
+    Note:
+    This function assumes that the list contains at least two unique integers.
+    """
+    # Initialize the largest number as the first element of the list
     largest = lst[0]
+    
+    # Initialize the second largest number as 0
     second_largest_num = 0
 
+    # Iterate over the list to find the largest and second largest numbers
     for i in lst:
         if i > largest:
+            # Update second largest to the previous largest
             second_largest_num = largest
+            # Update largest to the current number
             largest = i
         elif largest > i > second_largest_num:
+            # Update second largest if the current number is between largest and second largest
             second_largest_num = i
 
     return second_largest_num

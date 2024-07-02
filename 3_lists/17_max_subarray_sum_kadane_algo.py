@@ -80,6 +80,35 @@ def max_sum_subarr_v3(arr):
     # Space Complexity: O(1)
 
 
+# also prints the subarray with the maximum sum.
+
+def max_sum_subarr_v4(arr):
+
+    maxi = arr[0]
+
+    sum = 0
+
+    # Initialize the start and end of the subarray with the maximum sum.
+    ansStart = -1
+    ansEnd = -1
+
+
+    for i in range(len(arr)):
+
+        if sum == 0:
+            start = i
+
+        sum = sum + arr[i] if sum + arr[i] >= 0  else 0
+
+        if sum > maxi:
+            ansStart = start
+            ansEnd = i
+
+        maxi = max(sum, maxi)
+
+    
+    return maxi, arr[ansStart:ansEnd+1]
+
 def main():
     arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
     # arr = list(map(int, input("Enter the array elements separated by spaces: ").split()))
@@ -88,6 +117,8 @@ def main():
     print(max_sum_subarr_v2(arr))
     print('------------------------------------------')
     print(max_sum_subarr_v3(arr))
+    print('------------------------------------------')
+    print(max_sum_subarr_v4(arr))
 
 
 
